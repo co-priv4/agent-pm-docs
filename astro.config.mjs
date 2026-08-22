@@ -16,9 +16,9 @@ export default defineConfig({
       },
       social: [
         {
-          icon: 'github',
-          label: 'GitHub',
-          href: 'https://github.com/co-priv4',
+          icon: 'email',
+          label: 'リリース優先案内の受付',
+          href: 'https://intercom.help/tokyo-ai-solutions-llc/ja/articles/16573060-agent-pm-リリース優先案内の受付',
         },
       ],
       sidebar: [

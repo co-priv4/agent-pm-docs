@@ -1,0 +1,69 @@
+---
+title: agent-pm
+description: AI エージェントにプロジェクト管理（PM）の全責務を委ねるシステム — マニュアル・概要
+template: splash
+hero:
+  tagline: AI エージェントに PM の全責務を委ねる
+  actions:
+    - text: はじめての方はこちら
+      link: /agent-pm-docs/getting-started/
+      icon: right-arrow
+      variant: primary
+    - text: 機能ガイドブック
+      link: /agent-pm-docs/guides/guide/
+      icon: open-book
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## 概要
+
+**agent-pm** は、AI エージェントにプロジェクト管理（PM）の全責務 —
+計画・分解・追跡・分析・報告・課題発見 — を委ねるシステムです。
+「マルチAI × マルチプラットフォーム」を統一コマンドで隠蔽し、
+PM 職能の AI 置換と AI 自身の自己進化を目指します。
+
+> 失敗は隠さず即座に可視化（Fail-Loud）。PM の判断は既定で
+> review-before-merge gate を通ります。
+
+```bash
+python3 agent-pm.py claude PM スタンドアップ --dry-run
+```
+
+これ 1 コマンドで（API キー不要・モック応答）スタンドアップレポートを生成できます。
+
+<CardGrid>
+  <Card title="21 PM アクション" icon="list">
+    計画作成 / タスク分解 / 見積もり / ガント更新 / リスク分析 / デイリーレビュー /
+    課題発見 / 予測 / 自律実行 … PM の職務を統一文法で呼び出せます。
+  </Card>
+  <Card title="PLAN → EXECUTE ループ" icon="rocket">
+    見積もったタスクを依存グラフでスケジュールし、ready なタスクから
+    LLM が実装 → PR → 自動マージで連続的に片付けます。
+  </Card>
+  <Card title="マルチバックエンド" icon="bot">
+    既定はローカル Claude Code CLI（API キー不要）。Gemini / OpenAI 互換
+    （MiniMax 等）/ CLI エージェントへの切替は config だけで完了します。
+  </Card>
+  <Card title="3 プラットフォーム" icon="git-branch">
+    GitHub / GitLab / Azure DevOps を同じインターフェースで操作します。
+  </Card>
+  <Card title="安全設計" icon="shield">
+    書込 action は既定で PREVIEW。破壊的操作は許可リストで拒否します。
+    clone しただけでは自動化は一切動きません。
+  </Card>
+  <Card title="ガント可視化" icon="chart">
+    GitHub Projects v2 の Roadmap ビューに RCPSP スケジュール
+    （Start/Due 日付）を自動同期します。
+  </Card>
+</CardGrid>
+
+## ドキュメント
+
+- [クイックスタート](/agent-pm-docs/getting-started/) — 5 分で動かす
+- [機能ガイドブック](/agent-pm-docs/guides/guide/) — 全 21 アクションと安全モードの全容
+- [認証と権限](/agent-pm-docs/guides/auth/) — gh CLI / PAT・必要スコープ・権限×機能の可否表
+- [ガント可視化](/agent-pm-docs/guides/gantt-visual/) — Roadmap ビューの初回設定（スクリーンショット付き）
+- [設定パターン](/agent-pm-docs/guides/config-patterns/) — 初回クローン / 本番 / 独自リポ / 上書き
+- [LLM バックエンド](/agent-pm-docs/guides/llm-backend/) — バックエンド切替と設定項目
+- [システム設計](/agent-pm-docs/guides/architecture/) — ハンドラー・プラットフォームの構成

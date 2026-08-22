@@ -16,9 +16,9 @@ export default defineConfig({
       },
       social: [
         {
-          icon: 'email',
-          label: 'リリース優先案内の受付',
-          href: 'https://intercom.help/tokyo-ai-solutions-llc/ja/articles/16573060-agent-pm-リリース優先案内の受付',
+          icon: 'rocket',
+          label: 'agent-pm 製品ページ',
+          href: 'https://agent-pm-cli.lovable.app/',
         },
       ],
       sidebar: [

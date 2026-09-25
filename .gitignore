@@ -18,3 +18,7 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# auto-added by instructions/10_storage/100_audit_storage_policy.md
+.audit/development_direction.yml
+
